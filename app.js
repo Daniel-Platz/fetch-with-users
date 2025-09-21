@@ -33,6 +33,7 @@ async function fetchUsers() {
   return resp.json();
 }
 
+// Render the current users into a table with action buttons
 function renderUsers(list) {
   const table = document.querySelector("#usersTable");
   table.textContent = "";
@@ -87,6 +88,7 @@ function renderUsers(list) {
   }
 }
 
+// Handle clicks on table action buttons (edit/delete)
 function handleTableClick(event) {
   const button = event.target;
   const userId = Number(button.dataset.userId);
@@ -102,6 +104,7 @@ function handleTableClick(event) {
   }
 }
 
+// Delete a user on the API and update the table
 async function handleDelete(userId) {
   try {
     const resp = await fetch(`${USERS_URL}/${userId}`, { method: "DELETE" });
@@ -125,6 +128,7 @@ async function handleDelete(userId) {
   }
 }
 
+// Submit the form for either creating or updating a user
 async function handleFormSubmit(event) {
   event.preventDefault();
 
