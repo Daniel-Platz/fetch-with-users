@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f5f5f5;
+  color: #222;
+}
+
+#messages {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  color: #222;
+}
+
+#messages[data-type="success"] {
+  background: #d1f2d1;
+  color: #1d6b1d;
+}
+
+#messages[data-type="error"] {
+  background: #f9d6d5;
+  color: #9c1a1a;
+}
+
+#usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#usersTable th,
+#usersTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e3e3e3;
+  text-align: left;
+}
+
+#usersTable th {
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+#usersTable tr:last-child td {
+  border-bottom: none;
+}
+
+#usersTable button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  background: #157dfb;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#usersTable button:last-child {
+  margin-right: 0;
+}
+
+#usersTable button:hover {
+  background: #0e63c7;
+}
+
+#usersTable td button:last-child:hover {
+  background: #c73838;
+}
+
+#userForm {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#userForm input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#userForm button[type="submit"] {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #2cb56d;
+  color: #fff;
+  cursor: pointer;
+}
+
+#userForm button[type="submit"]:hover {
+  background: #239458;
+}
